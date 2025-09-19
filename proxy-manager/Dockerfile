@@ -16,7 +16,7 @@ ARG NGINX_PROXY_MANAGER_VERSION="v2.12.4"
 # hadolint ignore=DL3003,DL3042
 RUN \
     apk add --no-cache \
-    nginx
+    nginx=1.28.0-r3
 
 # Copy root filesystem
 COPY rootfs /
