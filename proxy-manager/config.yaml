@@ -19,3 +19,4 @@ map:
   - addon_config:rw
 backup_exclude:
   - "*/logs"
+image: "ghcr.io/vguttmann/{arch}-addon-nginx"

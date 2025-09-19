@@ -2,15 +2,6 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/base:18.1.1
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-# Required for webpack config of NPM with Node.js 22
-ENV NODE_OPTIONS="--openssl-legacy-provider"
-
-# Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
-# Setup base
-ARG NGINX_PROXY_MANAGER_VERSION="v2.12.4"
-# hadolint ignore=DL3003,DL3042
 RUN \
     apk add --no-cache \
     nginx=1.28.0-r3
